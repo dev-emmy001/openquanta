@@ -6,7 +6,7 @@ import { Search, ArrowRight, CornerDownRight } from "lucide-react";
 
 const FAQ = () => {
   return (
-    <section className="w-full bg-black text-white py-24 px-6 md:px-12 border-t border-white/5">
+    <section className="w-full bg-black text-white py-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center">
         
         {/* 1. Header Text */}

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar"; 
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { ChevronUp, ChevronDown, MoreHorizontal } from "lucide-react"; 
 
@@ -59,18 +60,24 @@ const AboutPage = () => {
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-purple-500/30">
       <Navbar />
       
-      {/* --- BACKGROUND ANIMATION --- */}
-      <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+      {/* --- HERO BACKGROUND ANIMATION (Absolute top only) --- */}
+      {/* Changed from 'fixed' to 'absolute' and limited height to 100vh or slightly more */}
+      <div className="absolute top-0 left-0 w-full h-[120vh] pointer-events-none z-0 overflow-hidden">
+        
+        {/* The Blobs */}
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3], x: [0, 50, 0] }}
+          animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1], x: [0, 50, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[-10%] left-[-20%] w-[80vw] h-[80vw] rounded-full bg-purple-900/40 blur-[80px] md:blur-[120px]"
         />
         <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2], x: [0, -30, 0], y: [0, 50, 0] }}
+          animate={{ scale: [1, 1.1, 1], opacity: [1, 0.5, 1], x: [0, -30, 0], y: [0, 50, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           className="absolute top-[10%] right-[-20%] w-[70vw] h-[70vw] rounded-full bg-rose-900/30 blur-[80px] md:blur-[120px]"
         />
+
+        {/* Fade to Black at the bottom of the hero section */}
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-black via-black/80 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24">
@@ -80,7 +87,7 @@ const AboutPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-24 md:mb-32 max-w-3xl"
+          className="mb-32 md:mb-40 max-w-3xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
             How OpenQuanta Works
@@ -100,7 +107,8 @@ const AboutPage = () => {
 
 
         {/* --- PART 2: SPLIT LAYOUT (Sticky Nav + Content) --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+        {/* Added relative z-10 to ensure this sits on top of any potential background bleed, though the gradient handles it */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative z-10">
           
           {/* LEFT: STICKY SIDEBAR (Summary) */}
           <div className="hidden lg:block lg:col-span-4 relative">
@@ -153,7 +161,7 @@ const AboutPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 0.6 }}
-                className="scroll-mt-32" // Adds margin-top when scrolled to via hash/click
+                className="scroll-mt-32" 
               >
                 
                 {/* Mobile Heading (Visible only on small screens) */}
@@ -233,6 +241,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
