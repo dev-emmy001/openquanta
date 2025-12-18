@@ -51,7 +51,7 @@ const itemVariants: Variants = {
           <div className="z-10 shrink-0 cursor-pointer text-xl font-bold tracking-tight">
             <Image
               src="/icons/oQWhite.svg"
-              alt="openQuanta Logo"
+              alt="openQuanta logo"
               width={120}
               height={40}
               priority

@@ -65,12 +65,13 @@ const Footer = () => {
               <div>
                 {/* Logo */}
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="relative w-8 h-8">
-                     {/* CSS-only Logo representation */}
-                    <div className="absolute inset-0 border-4 border-[#FF4D00] rounded-full"></div>
-                    <div className="absolute bottom-0 right-0 w-3 h-3 bg-white border-2 border-black rounded-full translate-x-1 translate-y-1"></div>
-                  </div>
-                  <span className="text-xl font-bold tracking-tight">openQuanta</span>
+                <Image
+                              src="/icons/oQWhite.svg"
+                              alt="openQuanta Logo"
+                              width={180}
+                              height={60}
+                              priority
+                            />
                 </div>
                 
                 <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-sm">

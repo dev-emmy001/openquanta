@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Sparkles, ChevronRight, Play } from "lucide-react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Features from "./components/Features";
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [1, 1, 1],
             x: [0, 50, 0],
           }}
           transition={{
@@ -118,6 +119,7 @@ const Hero = () => {
       
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+        <Features />
         <Footer />
     </section>
   
