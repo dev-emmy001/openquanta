@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ChevronRight, Play } from "lucide-react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Hero = () => {
   return (
@@ -29,7 +30,7 @@ const Hero = () => {
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [1, 1, 1],
             x: [0, -30, 0],
             y: [0, 50, 0],
           }}
@@ -64,9 +65,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-4 md:mb-6 leading-[1.1]"
         >
-          Add hero a Here <br />
+          The future is Here!<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60">
-            research research.
+            It's openQuanta.
           </span>
         </motion.h1>
 
@@ -117,7 +118,9 @@ const Hero = () => {
       
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+        <Footer />
     </section>
+  
   );
 };
 
