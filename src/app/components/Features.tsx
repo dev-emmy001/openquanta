@@ -60,7 +60,7 @@ const Features = () => {
         <motion.div
           animate={{
             scale: [1, 1.1, 1],
-            opacity: [1, 2, 1],
+            opacity: [1, 1, 1],
             x: [0, -30, 0],
             y: [0, 50, 0],
           }}
@@ -78,14 +78,14 @@ const Features = () => {
         
         {/* 1. SECTION HEADER */}
         <div className="text-center mb-20 space-y-6">
-          <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+          <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
             The modern standard
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mt-6 tracking-tight">
             Beautiful documentation <br className="hidden md:block" />
             that converts users
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto md:text-sm text-xs">
             A platform you can rely on to reach your audience
           </p>
         </div>

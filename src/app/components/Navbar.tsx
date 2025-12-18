@@ -50,7 +50,7 @@ const itemVariants: Variants = {
           {/* 1. LOGO */}
           <div className="z-10 shrink-0 cursor-pointer text-xl font-bold tracking-tight">
             <Image
-              src="/icons/oQWhite.svg"
+              src="/icons/oqwhite.svg"
               alt="openQuanta logo"
               width={120}
               height={40}
