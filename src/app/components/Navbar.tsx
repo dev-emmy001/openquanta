@@ -11,16 +11,16 @@ const Navbar: React.FC = () => {
     { name: 'Marketplace', href: '#' },
     { name: 'Discover Research', href: '#' },
     { name: 'Document', href: '#' },
-    { name: 'About', href: '#' },
+    { name: 'About', href: '/about' },
   ];
 
-  // Animation Variants
+  // Animation Variants (reworked for snappier transitions)
 const menuVariants: Variants = {
   closed: {
     opacity: 0,
     height: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.12,
       ease: "easeInOut",
       when: "afterChildren"
     }
@@ -29,17 +29,35 @@ const menuVariants: Variants = {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 0.3,
+      duration: 0.12,            // instant container reveal
       ease: "easeOut",
-      when: "beforeChildren",
-      staggerChildren: 0.1
+      when: "beforeChildren",    // show container quickly, then children animate
+      staggerChildren: 0.06     // smaller stagger so links appear faster
     }
   }
 };
 
 const itemVariants: Variants = {
-  closed: { opacity: 0, x: 20 },
-  open: { opacity: 1, x: 0 }
+  closed: {
+    opacity: 0,
+    x: 12,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 30,
+      mass: 0.6
+    }
+  },
+  open: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 30,
+      mass: 0.6
+    }
+  }
 };
 
   return (
