@@ -99,7 +99,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.95, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="relative w-full max-w-5xl mt-12 md:mt-20 aspect-video rounded-xl md:rounded-2xl border border-white/10 bg-white/5 shadow-2xl overflow-hidden group"
+          className="relative w-full max-w-5xl mt-12 md:mt-20 aspect-video border border-white/10 bg-white/5 shadow-2xl overflow-hidden group"
         >
           {/* Inner Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

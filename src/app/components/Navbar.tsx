@@ -66,7 +66,9 @@ const itemVariants: Variants = {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
           
           {/* 1. LOGO */}
-          <div className="z-10 shrink-0 cursor-pointer text-xl font-bold tracking-tight">
+          <a 
+            href="/"
+            className="z-10 shrink-0 cursor-pointer text-xl font-bold tracking-tight">
             <Image
               src="/images/oqwhite.svg"
               alt="openQuanta logo"
@@ -74,7 +76,7 @@ const itemVariants: Variants = {
               height={40}
               priority
             />
-          </div>
+          </a>
 
           {/* 2. DESKTOP NAV */}
           <div className="hidden absolute left-1/2 -translate-x-1/2 md:flex items-center gap-8">
@@ -92,7 +94,7 @@ const itemVariants: Variants = {
           {/* 3. RIGHT SECTION */}
           <div className="z-10 flex items-center gap-4">
             <a
-              href="#"
+              href="https://openquanta.vercel.app/login"
               className="hidden text-sm font-medium text-white transition-opacity hover:opacity-80 md:block"
             >
               Sign In
