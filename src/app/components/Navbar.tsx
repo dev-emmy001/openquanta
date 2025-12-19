@@ -7,58 +7,58 @@ import type { Variants } from 'framer-motion';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // 1. Added a 'badge' property to the Marketplace object
   const links = [
-    { name: 'Marketplace', href: '#' },
-    { name: 'Discover Research', href: '#' },
+    { name: 'Marketplace', href: '#', badge: 'Coming Soon' }, 
+    { name: 'Blog Page', href: '#' },
     { name: 'Document', href: '#' },
     { name: 'About', href: '/about' },
   ];
 
-  // Animation Variants (reworked for snappier transitions)
-const menuVariants: Variants = {
-  closed: {
-    opacity: 0,
-    height: 0,
-    transition: {
-      duration: 0.12,
-      ease: "easeInOut",
-      when: "afterChildren"
+  const menuVariants: Variants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.12,
+        ease: "easeInOut",
+        when: "afterChildren"
+      }
+    },
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.12,
+        ease: "easeOut",
+        when: "beforeChildren",
+        staggerChildren: 0.06
+      }
     }
-  },
-  open: {
-    opacity: 1,
-    height: "auto",
-    transition: {
-      duration: 0.12,            // instant container reveal
-      ease: "easeOut",
-      when: "beforeChildren",    // show container quickly, then children animate
-      staggerChildren: 0.06     // smaller stagger so links appear faster
-    }
-  }
-};
+  };
 
-const itemVariants: Variants = {
-  closed: {
-    opacity: 0,
-    x: 12,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 30,
-      mass: 0.6
+  const itemVariants: Variants = {
+    closed: {
+      opacity: 0,
+      x: 12,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        mass: 0.6
+      }
+    },
+    open: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+        mass: 0.6
+      }
     }
-  },
-  open: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 30,
-      mass: 0.6
-    }
-  }
-};
+  };
 
   return (
     <>
@@ -84,9 +84,16 @@ const itemVariants: Variants = {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                className="group flex items-center gap-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
               >
                 {link.name}
+                
+                {/* Badge Render Logic */}
+                {link.badge && (
+                  <span className="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-purple-300">
+                    {link.badge}
+                  </span>
+                )}
               </a>
             ))}
           </div>
@@ -106,7 +113,6 @@ const itemVariants: Variants = {
               className="text-xs font-medium tracking-widest text-gray-300 md:hidden border border-gray-700 rounded-full px-3 py-1 hover:bg-white/10 hover:text-white transition"
             >
               <motion.span
-                // Simple animation for the text changing
                 key={isOpen ? "close" : "menu"}
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -133,8 +139,14 @@ const itemVariants: Variants = {
                   key={link.name}
                   href={link.href}
                   variants={itemVariants}
-                  className="text-lg font-medium text-gray-300 hover:text-white"
+                  className="flex items-center gap-3 text-lg font-medium text-gray-300 hover:text-white"
                 >
+                  {/* Badge Logic for Mobile */}
+                  {link.badge && (
+                    <span className="rounded-full border border-purple-500/30 bg-purple-500/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-purple-300">
+                      {link.badge}
+                    </span>
+                  )}
                   {link.name}
                 </motion.a>
               ))}
