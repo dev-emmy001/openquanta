@@ -80,13 +80,11 @@ const MarketplacePage = () => {
                 placeholder="Enter your email address" 
                 className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/10 transition-all"
               />
-              <div className="absolute right-2 top-2 p-2 bg-white/5 rounded-full border border-white/5">
-                <Bell className="w-4 h-4 m-0 text-gray-400" />
-              </div>
+           
             </div>
             <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
               Notify Me
-              <ArrowRight className="w-4 h-4" />
+      <Bell className="w-4 h-4 m-0 text-gray-800" />
             </button>
           </motion.div>
 
