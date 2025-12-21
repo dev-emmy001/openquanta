@@ -16,16 +16,16 @@ const Footer = () => {
     {
       title: "Policy & Legal",
       links: [
-        { name: "Privacy Policy", href: "#" },
-        { name: "Terms & Conditions", href: "#" },
-        { name: "Cookie Policy", href: "#" },
+        { name: "Privacy Policy", href: "/privacyandpolicy" },
+        { name: "Terms & Conditions", href: "/termsandconditions" },
+        { name: "Cookie Policy", href: "/cookiepolicy" },
       ],
     },
     {
       title: "About & Info",
       links: [
-        { name: "About Us", href: "#" },
-        { name: "Contact Us", href: "#" },
+        { name: "About Us", href: "/about" },
+        { name: "Contact Us", href: "/contact" },
         { name: "Whitepaper", href: "#" },
       ],
     },
@@ -34,7 +34,7 @@ const Footer = () => {
       links: [
         { name: "DAOs", href: "#" },
         { name: "Research Highlights", href: "#" },
-        { name: "Blog / Insights", href: "#" },
+        { name: "Blog / Insights", href: "/blog" },
       ],
     },
   ];
