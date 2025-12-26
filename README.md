@@ -1,85 +1,33 @@
+
 # OpenQuanta Protocol
 
-![OpenQuanta Banner](public/images/oqwhite.svg) **The decentralized protocol for scientific publishing.** OpenQuanta enables researchers to publish work, secure authorship via NFTs, and build verifiable reputation on-chain—without extractive intermediaries.
+![OpenQuanta Banner](public/images/oqwhite.svg)
 
-[Live Demo](https://openquanta.science) · [Documentation](https://docs.openquanta.science) · [Report Bug](https://github.com/yourusername/openquanta/issues)
+OpenQuanta is a decentralized protocol reimagining scientific publishing. By combining blockchain-native ownership, tokenized access, and transparent reputation mechanics, OpenQuanta empowers researchers to publish, monetize, and prove authorship without relying on legacy publishers.
 
----
+## Vision
+Create an open, market-driven ecosystem where knowledge is discoverable, authors retain value from their work, and reputation is verifiable. OpenQuanta aims to shift incentives toward rapid dissemination, reproducibility, and fair compensation for contributors.
 
-## ⚡ Introduction
+## What we provide
+- Authorship as on-chain ownership: Publications mint Authorship NFTs that represent provenance and entitlements.
+- Pay-per-view and tokenized access: Readers and institutions access full texts using $QPT tokens, enabling granular monetization and new licensing models.
+- Transparent reputation layer: Citations, reviews, and contribution metrics are recorded to form an immutable reputation score for authors and reviewers.
+- Peer review as a DAO-driven process: Incentivized, accountable peer review recorded as verifiable digital assets.
+- Liquid research assets: Research outputs can be traded, fractionally owned, or auctioned while preserving attribution.
 
-OpenQuanta is a market-driven publishing platform built to disrupt the traditional academic publishing model. By leveraging blockchain technology and **Authorship NFTs**, we ensure:
+## Key principles
+- Author-first economics: Maximize revenue retention for creators while keeping access flexible.
+- Verifiability: Make authorship, reviews, and citation histories auditable and tamper-resistant.
+- Composability: Design research assets and reputation data to interoperate with DeFi, educational platforms, and institutional workflows.
+- Inclusivity: Lower barriers for contributors worldwide by enabling micro-payments and modular access.
 
-* **90% Revenue Retention:** Authors keep the majority of access fees (vs. traditional ~10%).
-* **Immutable Reputation:** Citations and reviews are recorded on-chain, creating a verifiable trust score.
-* **Liquid IP:** Research assets can be traded, auctioned, or fractionalized.
+## Status & roadmap
+OpenQuanta is actively in development. Core protocol concepts and a demo are available; further work focuses on blockchain integration (Solana / EVM), reputation tokenomics, and institutional tooling for bulk access and analytics.
 
-## ✨ Key Features
+## Links
+- Live Demo: https://openquanta.science
+- Documentation: https://docs.openquanta.science
+- Report a bug / issues: https://github.com/dev-emmy001/openquanta/issues
 
-* **Authorship NFTs:** Automatically mint an NFT upon publication representing IP ownership.
-* **Reputation Layer:** A dynamic scoring system based on citation velocity and peer review quality.
-* **Decentralized Access:** Pay-per-view access to full papers using **$QPT** tokens.
-* **Peer Review DAO:** Incentivized, transparent peer reviews recorded as digital assets.
-* **Institutional Integration:** Bulk access management for universities and research labs.
-
-## 🛠️ Tech Stack
-
-* **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-* **Animations:** [Framer Motion](https://www.framer.com/motion/)
-* **Icons:** [Lucide React](https://lucide.dev/)
-* **Deployment:** [Vercel](https://vercel.com/)
-* **Blockchain (Planned):** Solana / Ethereum (EVM compatible)
-
-## 🚀 Getting Started
-
-Follow these steps to get a local copy up and running.
-
-### Prerequisites
-
-* Node.js 18+ 
-* npm or yarn
-
-### Installation
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/yourusername/openquanta.git](https://github.com/yourusername/openquanta.git)
-    cd openquanta
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-3.  **Set up environment variables**
-    Copy the example env file and update it with your keys.
-    ```bash
-    cp .env.example .env.local
-    ```
-
-4.  **Run the development server**
-    ```bash
-    npm run dev
-    ```
-
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## 📂 Project Structure
-
-```bash
-/app
-  /about         # "How it Works" Bento Grid & Explanation
-  /blog          # Dynamic blog routing & content
-  /components    # Reusable UI components (Navbar, Footer, Cards)
-  /contact       # Contact form & info
-  /data          # Static data files (Docs map, Blog posts)
-  /docs          # (Deprecated) Documentation is moved to external platform
-  /legal         # Privacy, Terms, Cookie policies
-  /marketplace   # Marketplace teaser page
-  page.tsx       # Landing page (Hero)
-/public
-  /icons         # Partner logos & SVGs
+OpenQuanta — decentralize authorship, democratize access, and make scientific value portable.
+````
