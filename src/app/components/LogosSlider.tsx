@@ -25,8 +25,8 @@ const LogosSlider = () => {
   return (
     <section className="relative w-full py-20 md:py-32 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-            {/* --- DESKTOP VIEW: STATIC GRID (Hidden on mobile) --- */}
-        <div className="hidden md:grid grid-cols-5 gap-x-8 gap-y-12 items-center justify-items-center">
+        {/* --- DESKTOP VIEW: STATIC GRID (Hidden on mobile) --- */}
+        {/* <div className="hidden md:grid grid-cols-5 gap-x-8 gap-y-12 items-center justify-items-center">
           {logos.map((logo) => (
             <div key={logo.id} className="w-full flex justify-center group">
                <div className="relative h-8 w-40 transition-all duration-300 opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 flex items-center justify-center"> 
@@ -40,38 +40,45 @@ const LogosSlider = () => {
                </div>
             </div>
           ))}
+        </div> */}
+        <div className="flex items-center pb-10">
+          {" "}
+          <h3 className="text-xl mx-auto font-semibold text-gray-500 group-hover:text-white transition-colors">
+            Our Partners
+          </h3>
         </div>
-
-        {/* --- MOBILE VIEW: INFINITE SLIDER (Hidden on desktop) --- */}
-        <div className="md:hidden relative w-full overflow-hidden py-4">
+        {/* --- MOBILE VIEW: INFINITE SLIDER (now visible on desktop) --- */}
+        <div className="relative w-full overflow-hidden py-4">
           {/* Gradients for smooth fade edges */}
           <div className="absolute left-0 top-0 bottom-0 w-20 z-20 bg-gradient-to-r from-black to-transparent pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-20 z-20 bg-gradient-to-l from-black to-transparent pointer-events-none" />
 
-          <motion.div 
+          <motion.div
             className="flex gap-16 w-max items-center"
             style={{ willChange: "transform" }}
             animate={{ x: -(logos.length * 128) }}
-            transition={{ 
-              duration: 30, 
-              ease: "linear", 
-              repeat: Infinity 
+            transition={{
+              duration: 30,
+              ease: "linear",
+              repeat: Infinity,
             }}
           >
             {mobileScrollData.map((logo, index) => (
-              <div key={`${logo.id}-mobile-${index}`} className="relative h-10 w-32 flex-shrink-0 opacity-80 flex items-center justify-center">
-                 <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={128}
-                    height={40}
-                    className="object-contain"
-                  />
+              <div
+                key={`${logo.id}-mobile-${index}`}
+                className="relative h-10 w-32 flex-shrink-0 opacity-80 flex items-center justify-center"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={128}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );

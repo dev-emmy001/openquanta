@@ -66,7 +66,7 @@ const Footer = () => {
                 {/* Logo */}
                 <div className="flex items-center gap-2 mb-6">
                   <Image
-                    src="/images/oqwhite.svg"
+                    src="/images/openquantalogo.svg"
                     alt="openQuanta Logo"
                     width={180}
                     height={60}
