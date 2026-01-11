@@ -11,7 +11,7 @@ const Features = () => {
       description: "Companies invest in security measures to ensure continuity, comply with legal requirements, and preserve customer trust.",
       imageSrc: "/images/share.svg",
       // IMPORTANT: Replace these with the actual intrinsic width/height of your SVGs
-      width: 800, 
+      width: 800,
       height: 600,
     },
     {
@@ -39,7 +39,7 @@ const Features = () => {
 
   return (
     <section className="relative w-full bg-black text-white py-24 px-6 md:px-12 overflow-hidden">
-      
+
       {/* --- BACKGROUND ANIMATION (Slow Motion Gradient) --- */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {/* Purple Blob */}
@@ -75,7 +75,7 @@ const Features = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        
+
         {/* 1. SECTION HEADER */}
         <div className="text-center mb-20 space-y-6">
           <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
@@ -93,34 +93,34 @@ const Features = () => {
         {/* 2. THE GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {featureData.map((feature, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className="flex flex-col group"
             >
-              
+
               {/* IMAGE CONTAINER */}
               {/* Removed fixed aspect ratios. The container height now depends on the image inside. */}
-              <div className="relative w-full bg-[#0A0A0A]/50 backdrop-blur-sm border border-white/5 overflow-hidden mb-8 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-2xl group-hover:shadow-purple-500/10">
-                
+              <div className="relative w-full bg-[#0A0A0A]/50 backdrop-blur-sm border border-white/5 overflow-hidden mb-8 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-2xl ">
+
                 {/* Using standard width/height props + w-full h-auto.
                   This allows the image to define the container's height.
                 */}
-                <Image 
-                   src={feature.imageSrc} 
-                   alt={feature.title}
-                   width={feature.width}
-                   height={feature.height}
-                   className="w-full h-auto hover:scale-105 transition-transform duration-500" 
-                /> 
-                
+                <Image
+                  src={feature.imageSrc}
+                  alt={feature.title}
+                  width={feature.width}
+                  height={feature.height}
+                  className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                />
+
               </div>
 
               {/* TEXT CONTENT */}
-              <div className="text-center md:text-left space-y-3 px-2">
+              <div className="text-center md:text-left space-y-3">
                 <h3 className="text-xl font-semibold text-gray-200 group-hover:text-white transition-colors">
                   {feature.title}
                 </h3>

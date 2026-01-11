@@ -72,15 +72,15 @@ const BuildingBlocks = () => {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {blocks.map((block, index) => {
                         const isOpen = openIndex === index;
                         return (
                             <div
                                 key={index}
                                 className={`
-                  relative p-8 border-b md:border-b-0 border-white/10 group transition-colors duration-500
-                  ${index !== 2 ? 'md:border-r' : ''} // Vertical borders between cards
+                  relative p-8 group transition-colors duration-500 border  border-white/10
+                  ${index !== 2 ? '' : ''} // Vertical borders between cards
                   hover:bg-white/[0.02]
                 `}
                             >
@@ -93,7 +93,7 @@ const BuildingBlocks = () => {
                                         onClick={() => toggleIndex(index)}
                                         className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all"
                                     >
-                                        {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                                        {isOpen ? <Minus size={20} strokeWidth={0.5} /> : <Plus strokeWidth={0.5} size={20} />}
                                     </button>
                                 </div>
 
@@ -113,7 +113,7 @@ const BuildingBlocks = () => {
                                             exit={{ height: 0, opacity: 0 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="pt-6 border-t border-white/10">
+                                            <div className="pt-6">
                                                 <span className="text-purple-400 text-sm font-bold uppercase tracking-wider mb-2 block">
                                                     Our Approach
                                                 </span>
