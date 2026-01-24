@@ -12,7 +12,7 @@ const NotFound = () => {
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-purple-500/30 flex flex-col">
       <Navbar />
 
-      {/* --- BACKGROUND ANIMATION --- */}
+      {/*background animation*/}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[100px]" />
         <motion.div
@@ -23,10 +23,10 @@ const NotFound = () => {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
       </div>
 
-      {/* --- MAIN CONTENT --- */}
+      {/*main content */}
       <main className="relative z-10 grow flex flex-col items-center justify-center px-6 text-center">
         
-        {/* 404 GLOW TEXT */}
+        {/*404 glow text */}
         <div className="relative mb-8">
           <motion.h1 
             initial={{ opacity: 0, scale: 0.8 }}
@@ -44,14 +44,13 @@ const NotFound = () => {
                 duration: 0.5, // Entry duration
                 textShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" } // Glow loop
             }}
-            // Removed transparent bg-clip. Added solid color text-gray-100.
             className="text-[120px] md:text-[200px] font-bold leading-none tracking-tighter text-gray-200 select-none"
           >
             404
           </motion.h1>
         </div>
 
-        {/* ERROR MESSAGE */}
+        {/*error text*/}
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +69,7 @@ const NotFound = () => {
           The page you are looking for seems to have collapsed into a superposition state or does not exist in this dimension.
         </motion.p>
 
-        {/* ACTION BUTTONS */}
+        {/*actions*/}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
