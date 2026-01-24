@@ -10,7 +10,6 @@ const Features = () => {
       title: "Sharing with colleagues with collea",
       description: "Companies invest in security measures to ensure continuity, comply with legal requirements, and preserve customer trust.",
       imageSrc: "/images/share.svg",
-      // IMPORTANT: Replace these with the actual intrinsic width/height of your SVGs
       width: 800,
       height: 600,
     },
@@ -40,7 +39,7 @@ const Features = () => {
   return (
     <section className="relative w-full bg-black text-white py-24 px-6 md:px-12 overflow-hidden">
 
-      {/* --- BACKGROUND ANIMATION (Slow Motion Gradient) --- */}
+      {/*background animation */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {/* Purple Blob */}
         <motion.div
@@ -76,7 +75,7 @@ const Features = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* 1. SECTION HEADER */}
+        {/*header*/}
         <div className="text-center mb-20 space-y-6">
           <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
             The modern standard
@@ -90,7 +89,7 @@ const Features = () => {
           </p>
         </div>
 
-        {/* 2. THE GRID */}
+        {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {featureData.map((feature, index) => (
             <motion.div
@@ -102,13 +101,8 @@ const Features = () => {
               className="flex flex-col group"
             >
 
-              {/* IMAGE CONTAINER */}
-              {/* Removed fixed aspect ratios. The container height now depends on the image inside. */}
+              {/* image container */}
               <div className="relative w-full bg-[#0A0A0A]/50 backdrop-blur-sm border border-white/5 overflow-hidden mb-8 transition-all duration-300 group-hover:border-white/20 group-hover:shadow-2xl ">
-
-                {/* Using standard width/height props + w-full h-auto.
-                  This allows the image to define the container's height.
-                */}
                 <Image
                   src={feature.imageSrc}
                   alt={feature.title}
