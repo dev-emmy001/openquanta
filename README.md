@@ -28,6 +28,7 @@ OpenQuanta is actively in development. Core protocol concepts and a demo are ava
 - Live Demo: https://openquanta.science
 - Documentation: https://docs.openquanta.science
 - Report a bug / issues: https://github.com/dev-emmy001/openquanta/issues
+- (Not Deployed Yet)
 
 OpenQuanta — decentralize authorship, democratize access, and make scientific value portable.
 ````
