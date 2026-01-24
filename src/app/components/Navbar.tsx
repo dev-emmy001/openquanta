@@ -6,8 +6,6 @@ import type { Variants } from 'framer-motion';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // 1. Added a 'badge' property to the Marketplace object
   const links = [
     { name: 'Marketplace', href: '/marketplace', badge: 'Coming Soon' },
     { name: 'Blogs', href: '/blog' },
@@ -101,7 +99,7 @@ const Navbar: React.FC = () => {
           {/* 3. RIGHT SECTION */}
           <div className="z-10 flex items-center gap-4">
             <a
-              href="https://openquanta.vercel.app/login"
+              href="https://openquanta.vercel.app/"
               className="hidden text-sm font-medium text-white transition-opacity hover:opacity-80 md:block"
             >
               Sign In
