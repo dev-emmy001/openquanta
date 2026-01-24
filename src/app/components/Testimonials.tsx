@@ -40,7 +40,6 @@ const testimonials = [
   },
 ];
 
-// Duplicate data to create seamless loop
 const scrollData = [...testimonials, ...testimonials];
 
 const Testimonials = () => {
