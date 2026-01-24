@@ -97,10 +97,6 @@ const ContactPage = () => {
                 Connect with researchers and developers on our Discord server.
               </p>
               <div className="flex gap-4">
-                {/* <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-                   {/* Discord Icon (using MessageSquare as placeholder or import dedicated icon) */}
-                   <MessageSquare className="w-5 h-5 text-gray-300" />
-                </a> */}
                 <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
                    <Twitter className="w-5 h-5 text-gray-300" />
                 </a>
