@@ -68,7 +68,7 @@ const TermsPage = () => {
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-purple-500/30">
       <Navbar />
 
-      {/* --- HERO BACKGROUND ANIMATION (Absolute top only) --- */}
+      {/*hero background animation*/}
       <div className="absolute top-0 left-0 w-full h-[60vh] pointer-events-none z-0 overflow-hidden">
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2], x: [0, -50, 0] }}
@@ -80,7 +80,7 @@ const TermsPage = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 pt-32 pb-24">
         
-        {/* --- HEADER --- */}
+        {/*header*/}
         <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -115,7 +115,7 @@ const TermsPage = () => {
           </motion.p>
         </div>
 
-        {/* --- CONTENT SECTIONS --- */}
+        {/*content*/}
         <div className="space-y-8">
           {sections.map((section, index) => (
             <motion.div
@@ -149,7 +149,7 @@ const TermsPage = () => {
           ))}
         </div>
 
-        {/* --- CONTACT FOOTER --- */}
+        {/*contact footer*/}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
