@@ -51,7 +51,7 @@ const AboutPage = () => {
     <div className="relative w-full min-h-screen bg-black text-white selection:bg-purple-500/30">
       <Navbar />
       
-      {/* --- HERO BACKGROUND ANIMATION --- */}
+      {/* hero background animation */}
       <div className="absolute top-0 left-0 w-full h-[120vh] pointer-events-none z-0 overflow-hidden">
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 1], x: [0, 50, 0] }}
@@ -68,7 +68,7 @@ const AboutPage = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24">
         
-        {/* --- PART 1: THE HERO --- */}
+        {/*hero section*/}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,10 +92,10 @@ const AboutPage = () => {
         </motion.div>
 
 
-        {/* --- PART 2: SPLIT LAYOUT (Scroll Spy) --- */}
+        {/* split layout*/}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative z-10 mb-40">
           
-          {/* LEFT: STICKY SIDEBAR */}
+          {/* sticky sidebar */}
           <div className="hidden lg:block lg:col-span-4 relative">
              <div className="sticky top-32">
                 <div className="relative pl-6 border-l border-gray-800">
@@ -133,7 +133,7 @@ const AboutPage = () => {
             </div>
           </div>
 
-          {/* RIGHT: CONTENT CARDS */}
+          {/* content cards */}
           <div className="col-span-1 lg:col-span-8 space-y-24 md:space-y-40">
             {sections.map((section, index) => (
               <motion.div
@@ -211,7 +211,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        {/* --- PART 3: "HOW IT ACTUALLY WORKS" BENTO GRID --- */}
+        {/* bento grid - how it works */}
         <section className="relative w-full mb-32">
             
             {/* Section Header */}
@@ -232,7 +232,7 @@ const AboutPage = () => {
             <div className="bg-[#111111]/80 backdrop-blur-xl border border-white/5 rounded-3xl p-8 md:p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     
-                    {/* LEFT COLUMN: Text Content */}
+                    {/* Text Content */}
                     <div className="lg:col-span-4 flex flex-col justify-center">
                         <button className="text-orange-500 text-sm font-semibold mb-6 flex items-center gap-2 hover:gap-3 transition-all w-fit group">
                             Explore <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -243,10 +243,10 @@ const AboutPage = () => {
                         </p>
                     </div>
 
-                    {/* RIGHT COLUMN: Staggered Cards Grid */}
+                    {/* Staggered Cards Grid */}
                     <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                         
-                        {/* ROW 1 */}
+                        {/* row 1 */}
                         <BentoCard 
                             title="Research Paper" 
                             description="Submit and tokenize your paper to prove authorship and control distribution."
@@ -257,7 +257,7 @@ const AboutPage = () => {
                             description="Provide expert feedback and mint it on-chain as a verifiable review asset."
                         />
 
-                        {/* ROW 2 */}
+                        {/* row 2 */}
                         <BentoCard 
                             title="Reputation Layer" 
                             description="Earn public reputation points by contributing quality review."
@@ -271,7 +271,7 @@ const AboutPage = () => {
                             description="Enable others to cite and fund a research also a researcher can s..."
                         />
 
-                        {/* ROW 3 */}
+                        {/* row 3 */}
                         <BentoCard 
                             title="Auction & Bids" 
                             description="Auction your research or reviews let readers and institutions bid for early access."
@@ -297,7 +297,7 @@ const AboutPage = () => {
 const BentoCard = ({ title, description, className = "" }: { title: string, description: string, className?: string }) => (
     <div className={`group relative p-6 rounded-xl border border-white/5 bg-gradient-to-b from-white/[0.03] to-transparent hover:bg-white/[0.05] transition-all duration-500 hover:border-white/20 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.05)] overflow-hidden ${className}`}>
         
-        {/* Subtle Inner Highlight on Top */}
+        {/* Inner Highlight on Top */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
         <div className="relative z-10">
